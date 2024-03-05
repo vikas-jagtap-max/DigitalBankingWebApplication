@@ -1,0 +1,3 @@
+##We need to tell our micro-service where are our spring cloud config server is running. Spring cloud brings an additional context called bootstrap context which loads even before application context. Hence we write boostrap.yml / bootstrap.properties file
+
+spring.cloud.config.url=http://localhost:2123

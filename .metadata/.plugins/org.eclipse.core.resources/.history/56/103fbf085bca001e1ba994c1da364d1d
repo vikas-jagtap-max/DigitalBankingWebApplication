@@ -1,0 +1,51 @@
+package com.infymeMobile.user.api;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.infymeMobile.user.dto.UserDTO;
+import com.infymeMobile.user.exception.InfyMeMobileGlobalHandlerException;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Pattern;
+
+@RestController // class level annotation to define the class as controller
+				// @RequestMapping(value"/infymemobile/user") // Defines the base URL of the
+				// project @Validated
+
+public class UserAPI {
+
+@Autowired // Enables dependency injections public UserService userService;
+
+@PostMapping(value="/users") // Defines the URL of the posting data
+
+ResponseEntity<String> createUser (@RequestBody // Validate where body is available with data or not
+
+@Valid // Validates body based on different conditions such as length, pattern, etc
+
+UserDTO userDTO) throws InfyMeMobileGlobalHandlerException (
+
+String udto userService.createUser(userDTO); return new ResponseEntity<>(udto, HttpStatus. CREATED):
+
+}
+
+@PostMapping(value"/users/login") ResponseEntity<Boolean> loginUser (@RequestBody @Valid LoginDTO loginDTO) throws InfyMeMobileGlobalHandlerException {
+
+Boolean Idto userService.loginUser (loginDTO); 
+return new ResponseEntity<>(ldto, HttpStatus.OK);
+
+}
+
+@GetMapping(value="/users/(userId)") // Defines the URL of the retrieving data ResponseEntity<UserDTO> getUserProfile (@PathVariable // tells that the path required a value which is inside (1 in
+
+//URL.
+
+@Pattern (regexp = "[U] (1) [A-Za-z0-9]+", message "(user.userid.invalid)") // Pattern used for usedID String userid) throws InfyMeMobileGlobalHandlerException {
+
+UserDTO ul userService.getUserProfile(userId);return new ResponseEntity<>(ul,HttpStatus.OK)
+:

@@ -1,0 +1,5 @@
+package com.infymeMobile.user.api;
+
+public class UserAPI {
+
+}

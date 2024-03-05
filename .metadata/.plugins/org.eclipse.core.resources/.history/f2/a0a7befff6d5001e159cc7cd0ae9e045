@@ -1,0 +1,31 @@
+package swapTwoNumbers;
+
+public class Swapping {
+
+	public static void main(String[] args) {
+
+		int a = 5;
+		int b = 10;
+
+		// 1)Using temporary variable
+		int temp;
+		temp = a;
+		a = b;
+		b = temp;
+
+		System.out.println("A is: " + a + " and " + "B is: " + b);
+
+		// 2)Using mathematical operations such as +, - , *, /
+
+		// 3)Using Bitwise Manipulation - EXOR bitwise operator
+
+		int a1 = 10;
+		int b1 = 20;
+		a1 = a1 ^ b1;
+		b1 = a1 ^ b1;
+		a1 = a1 ^ b1;
+
+		System.out.println("A is: " + a + " and " + "B is: " + b);
+	}
+
+}

@@ -1,0 +1,11 @@
+spring.application.name=config-server
+server.port=2124
+
+##Git repository where our properties files are present
+spring.cloud.config.server.git.uri=https://github.com/vikas-jagtap-max/InfyMeWebApplication-Config.git
+#spring.cloud.config.server.git.clone-on-start=true
+#spring.cloud.config.server.git.skip-ssl-validation=true
+spring.cloud.config.server.git.username=vikas-jagtap-max
+spring.cloud.config.server.git.password=Vikas@969
+
+

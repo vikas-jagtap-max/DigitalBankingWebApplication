@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<form action="/infymemobile/account/{mobileNumber}" method="get">
+		Enter Mobile Number:<input type="number" name="mobileNumber">
+		<input type="button" name="">
+	</form>
+
+
+	<form action="/infymemobile/account/{mobileNumber}/{accountNumber}"
+		method="post">
+		<input type="" name="">
+	</form>
+
+	<form
+		action="/infymemobile/account/{mobileNumber}/{accountNumber}/{otp}"
+		method="post">
+		<input type="" name="">
+	</form>
+
+	<form
+		action="/infymemobile/account/balance/{mobileNumber}/{accountNumber}/{otp}"
+		method="get">
+		<input type="button" value="Balance">
+	</form>
+
+	<form action="/infymemobile/account/fundtransfer" method="put">
+		<input type="button" name="Fund Transfer">
+	</form>
+
+	<form action="/infymemobile/account/statement/{mobileNumber}"
+		method="get">
+		<input type="button" value="Account Statement">
+	</form>
+
+</body>
+</html>

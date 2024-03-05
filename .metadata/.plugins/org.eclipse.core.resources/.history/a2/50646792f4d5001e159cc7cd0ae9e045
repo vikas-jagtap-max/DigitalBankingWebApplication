@@ -1,0 +1,23 @@
+package secondLargestSalaryFromAnArray;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class Salary {
+
+	public static void main(String[] args) {
+
+		int[] sal = { 50000, 50000, 67000, 35000, 70000 };
+
+		// Convert an array into stream
+		// remove duplicate elements
+		// from stream to integer objects
+		//
+		//
+		double SecLargestSal = Arrays.stream(sal).distinct().boxed().sorted(Comparator.reverseOrder()).skip(1)
+				.findFirst().get();
+
+		System.out.println("Second largest salary from an array is: " + SecLargestSal);
+	}
+
+}

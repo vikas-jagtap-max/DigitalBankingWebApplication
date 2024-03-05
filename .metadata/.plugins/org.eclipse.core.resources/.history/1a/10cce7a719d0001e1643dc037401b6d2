@@ -1,0 +1,26 @@
+package paranthesisBalancedOrNot;
+
+import java.util.Stack; //
+
+public class Paran {
+
+	public String checkBalanceOrNot() {
+
+		String data = "{([])}";
+		char[] charArray = data.toCharArray();
+
+		Stack<Character> stack = new Stack<>();
+
+		for (char c : charArray) {
+
+		}
+
+		return "NO";
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

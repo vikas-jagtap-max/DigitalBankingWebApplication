@@ -1,0 +1,15 @@
+package com.infymeMobile.account;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@EnableEurekaClient
+@SpringBootApplication
+public class InfyMeMobileAccountApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(InfyMeMobileAccountApplication.class, args);
+		System.out.println("Account microservice has started...");
+	}
+
+}
