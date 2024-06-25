@@ -45,7 +45,7 @@ public class UserAPI {
 		return new ResponseEntity<>(ldto, HttpStatus.CREATED);
 	}
 
-	@GetMapping(value = "/users/{userId") // Defines the URL of the retrieving data
+	@GetMapping(value = "/users/{userId}") // Defines the URL of the retrieving data
 	ResponseEntity<UserDTO> getUserProfile(@PathVariable // tells that the path required a value which is inside {} in
 															// URL.
 	@Pattern(regexp = "[U] {1} [A-Za-z0-9]+", message = "{user.userid.invalid}") // Pattern used for userID

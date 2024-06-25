@@ -10,7 +10,7 @@ public class InfyMeMobileUserApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(InfyMeMobileUserApplication.class, args);
-		System.out.println("Account microservice has started...");
+		System.out.println("User microservice has started...");
 	}
 
 }
