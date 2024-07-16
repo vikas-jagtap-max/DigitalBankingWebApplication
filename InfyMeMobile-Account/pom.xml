@@ -113,6 +113,12 @@
 			<version>2.5.0</version>
 		</dependency>
 
+		<!--Monitor the health of application using Spring Boot Actuator-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
