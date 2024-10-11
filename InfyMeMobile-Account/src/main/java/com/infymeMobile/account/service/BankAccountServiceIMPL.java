@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,6 +26,7 @@ public class BankAccountServiceIMPL implements BankAccountService {
 	@Autowired
 	DigitalBankAccountRepository digitalBankAccountRepository;
 
+	// @CachePut(key = "#accountNo", value = "accounts")
 	@Override
 	public String createAccount(BankAccountDTO accountDTO) throws InfyMeMobileGlobalHandlerException {
 //		BankAccountEntity bank1 = bankAccountRepository.findByMobileNumberAndBankAccountNumber(accountDTO.getAccountNumber(), accountDTO.getMobileNumber());
@@ -34,11 +37,12 @@ public class BankAccountServiceIMPL implements BankAccountService {
 
 		BankAccountEntity newBankAccount = BankAccountDTO.prepareBankAccountEntity(accountDTO);
 		newBankAccount = bankAccountRepository.save(newBankAccount);
-		String output = "The details for " + newBankAccount.getMobileNumber() + " has been saved.The Account Number is "
-				+ newBankAccount.getAccountNumber();
+		String output = "The details for " + newBankAccount.getMobileNumber()
+				+ " has been saved. The Account Number is " + newBankAccount.getAccountNumber();
 		return output;
 	}
 
+	// @Cacheable(key = "#mobileNo", value = "accounts")
 	@Override
 	public List<BankAccountDTO> listAccounts(Long mobileNo) throws InfyMeMobileGlobalHandlerException {
 		List<BankAccountEntity> list1 = bankAccountRepository.findByMobileNumber1(mobileNo);
@@ -58,6 +62,7 @@ public class BankAccountServiceIMPL implements BankAccountService {
 		return list2;
 	}
 
+	// @Cacheable(key = "#mobileNo", value = "accounts")
 	@Override
 	public double checkBalance(Long mobileNo, Long accountNo) throws InfyMeMobileGlobalHandlerException {
 		BankAccountEntity bankDetail = bankAccountRepository.findByMobileNumberAndBankAccountNumber(mobileNo,
@@ -87,7 +92,6 @@ public class BankAccountServiceIMPL implements BankAccountService {
 	}
 
 	private void findByMobileNumberAndBankAccountNumber(Long mobileNo, Long accountNo) {
-		// TODO Auto-generated method stub
 
 	}
 

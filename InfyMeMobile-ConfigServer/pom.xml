@@ -26,6 +26,12 @@
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
+		<!--secure centralized config server so that one does not directly access the property files by using the endpoints of the config server.-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 		<!--It is also a microservice that needs to be register in spring cloude eureka server's service registry-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

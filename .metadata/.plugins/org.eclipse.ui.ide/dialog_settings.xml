@@ -51,6 +51,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Vikas Jagtap\OneDrive\Desktop\Backend\Java\Web Frameworks\Spring Boot\Security in Spring Boot\JWT Authorization\SecuringRESTAPIs"/>
 			<item value="C:\Users\Vikas Jagtap\Desktop\Interview Preparation\HandsOn_Java_InterviewQ"/>
 		</list>
 	</section>
